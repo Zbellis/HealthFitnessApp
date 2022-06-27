@@ -7,12 +7,34 @@
 
 import WatchKit
 import Foundation
+//import WatchTimePicker
 
 
 class InterfaceController: WKInterfaceController {
-
+    var timePickerDataSource: TimePickerDataSource!
+    @IBOutlet weak var hourTimePicker: WKInterfacePicker!
+    @IBOutlet weak var minuteTimePicker: WKInterfacePicker!
+    @IBOutlet weak var selectedTimeLbl: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
-        // Configure interface objects here.
+        timePickerDataSource = TimePickerDataSource(hoursPicker: hourTimePicker, minutesPicker: minuteTimePicker, interval: .minute)
+        
+        timePickerDataSource.selectedTimeDidUpdate = { [weak self] selectedTime in
+            let timeFormatter = DateFormatter()
+            timeFormatter.timeStyle = .short
+            timeFormatter.dateStyle = .none
+            self?.selectedTimeLbl.setText(timeFormatter.string(from: selectedTime))
+        }
+        
+    }
+    
+    
+    @IBAction func hourPickerDidUpdate(_ value: Int) {
+
+    }
+    
+    override func pickerDidSettle(_ picker: WKInterfacePicker) {
+
     }
     
     override func willActivate() {

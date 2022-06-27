@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="20006"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Pick a Time-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller identifier="Picker" title="Pick a Time" animationDuration="2" alwaysBounce="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ProjectFox_1_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="65" alignment="left" id="tcs-1n-4Ww">
+                            <items>
+                                <picker width="0.5" height="1" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="r8y-nl-Tsh" userLabel="Hour Time Picker">
+                                    <connections>
+                                        <action selector="hourPickerDidUpdate:" destination="AgC-eL-Hgc" id="Za9-ZZ-koO"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.5" height="1" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="Acu-5b-Zn1" userLabel="Minute Time Picker"/>
+                            </items>
+                        </group>
+                        <label alignment="left" text="Time Label" id="E6Z-BO-bFg"/>
+                    </items>
+                    <connections>
+                        <outlet property="hourTimePicker" destination="r8y-nl-Tsh" id="NYx-K7-c6u"/>
+                        <outlet property="minuteTimePicker" destination="Acu-5b-Zn1" id="Fkw-Dd-Udm"/>
+                        <outlet property="selectedTimeLbl" destination="E6Z-BO-bFg" id="8ug-C3-FxS"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="-402" y="348"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -27,21 +47,21 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="476" y="370"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="ProjectFox_1_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="476" y="807"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="ProjectFox_1_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="869" y="370"/>
         </scene>
     </scenes>
 </document>

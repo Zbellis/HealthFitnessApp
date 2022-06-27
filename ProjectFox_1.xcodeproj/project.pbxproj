@@ -16,6 +16,7 @@
 		D591A3172868CF38004BB5AD /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A3162868CF38004BB5AD /* NotificationController.swift */; };
 		D591A3192868CF38004BB5AD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A3182868CF38004BB5AD /* ComplicationController.swift */; };
 		D591A31B2868CF3A004BB5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D591A31A2868CF3A004BB5AD /* Assets.xcassets */; };
+		D591A3302868DE0F004BB5AD /* TimePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D591A32F2868DE0F004BB5AD /* TimePickerDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		D591A31A2868CF3A004BB5AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D591A31C2868CF3A004BB5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D591A31D2868CF3A004BB5AD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D591A32B2868CF4C004BB5AD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D591A32F2868DE0F004BB5AD /* TimePickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +92,10 @@
 		D591A2F42868CF37004BB5AD = {
 			isa = PBXGroup;
 			children = (
+				D591A32B2868CF4C004BB5AD /* README.md */,
 				D591A3032868CF37004BB5AD /* ProjectFox_1 WatchKit App */,
 				D591A3112868CF38004BB5AD /* ProjectFox_1 WatchKit Extension */,
+				D591A32E2868DDD5004BB5AD /* WatchKitTimePicker */,
 				D591A2FC2868CF37004BB5AD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,6 +131,14 @@
 				D591A31D2868CF3A004BB5AD /* PushNotificationPayload.apns */,
 			);
 			path = "ProjectFox_1 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D591A32E2868DDD5004BB5AD /* WatchKitTimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				D591A32F2868DE0F004BB5AD /* TimePickerDataSource.swift */,
+			);
+			path = WatchKitTimePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +272,7 @@
 				D591A3192868CF38004BB5AD /* ComplicationController.swift in Sources */,
 				D591A3152868CF38004BB5AD /* ExtensionDelegate.swift in Sources */,
 				D591A3132868CF38004BB5AD /* InterfaceController.swift in Sources */,
+				D591A3302868DE0F004BB5AD /* TimePickerDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
